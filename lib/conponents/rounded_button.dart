@@ -13,13 +13,13 @@ class RoundedButton extends StatelessWidget {
       child: Container(
         height: 50,
         decoration: BoxDecoration(
-          color: Color(0xffF9A826),
+          color: const Color(0xffF9A826),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontFamily: 'OpenSans-Regular',

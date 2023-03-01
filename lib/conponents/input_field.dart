@@ -31,7 +31,7 @@ class InputField extends StatelessWidget {
           hintText: text,
 
           prefixIcon: icon,
-          hintStyle: TextStyle(color: Colors.grey),
+          hintStyle: const TextStyle(color: Colors.grey),
         ),
       ),
     );

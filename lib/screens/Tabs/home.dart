@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class HomeTab extends StatefulWidget {
@@ -23,14 +25,14 @@ class _HomeTabState extends State<HomeTab> {
                   children: [
                     Container(
                       child: Row(children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 26,
                           backgroundImage: AssetImage('assets/images/dp.png'),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.location_pin,
                           size: 32,
                           color: Colors.orange,
@@ -40,7 +42,7 @@ class _HomeTabState extends State<HomeTab> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'Delivery to',
                                 style: TextStyle(
                                     fontSize: 12,
@@ -51,14 +53,14 @@ class _HomeTabState extends State<HomeTab> {
                                 children: [
                                   InkWell(
                                     onTap: () {},
-                                    child: Text(
+                                    child: const Text(
                                       'My Location',
                                       style: TextStyle(
                                           fontSize: 14,
                                           fontFamily: "OpenSans-medium"),
                                     ),
                                   ),
-                                  Icon(Icons.arrow_drop_down)
+                                  const Icon(Icons.arrow_drop_down)
                                 ],
                               )
                             ],
@@ -70,13 +72,13 @@ class _HomeTabState extends State<HomeTab> {
                       child: Row(children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.notifications_none_outlined),
+                          icon: const Icon(Icons.notifications_none_outlined),
                           iconSize: 32,
                           color: Colors.orange,
                         ),
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.shopping_bag_outlined),
+                          icon: const Icon(Icons.shopping_bag_outlined),
                           iconSize: 32,
                           color: Colors.orange,
                         ),
@@ -84,7 +86,7 @@ class _HomeTabState extends State<HomeTab> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -97,11 +99,11 @@ class _HomeTabState extends State<HomeTab> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       hintText: 'Search food and kitchen',
-                      prefixIcon: Icon(Icons.search),
-                      hintStyle: TextStyle(color: Colors.grey),
-                      suffixIcon: Icon(Icons.filter_list_sharp)),
+                      prefixIcon: const Icon(Icons.search),
+                      hintStyle: const TextStyle(color: Colors.grey),
+                      suffixIcon: const Icon(Icons.filter_list_sharp)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -109,14 +111,14 @@ class _HomeTabState extends State<HomeTab> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Categories',
                         style: TextStyle(
                             fontFamily: "OpenSans-medium", fontSize: 20),
                       ),
                       TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'See all',
                             style: TextStyle(
                                 fontFamily: 'OpenSans-meduim', fontSize: 15),
@@ -152,14 +154,14 @@ class _HomeTabState extends State<HomeTab> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Kitchen near you',
                         style: TextStyle(
                             fontFamily: "OpenSans-medium", fontSize: 20),
                       ),
                       TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'See all',
                             style: TextStyle(
                                 fontFamily: 'OpenSans-meduim', fontSize: 15),
@@ -235,13 +237,14 @@ class _HomeTabState extends State<HomeTab> {
             ),
             radius: 35,
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Center(
             child: Text(
               title,
-              style: TextStyle(fontSize: 12, fontFamily: "OpenSans-medium"),
+              style:
+                  const TextStyle(fontSize: 12, fontFamily: "OpenSans-medium"),
               textAlign: TextAlign.center,
             ),
           )
@@ -259,14 +262,14 @@ class _HomeTabState extends State<HomeTab> {
           height: 120,
           width: 225,
           decoration: BoxDecoration(
-            color: Colors.red,
+            color: Colors.grey,
             borderRadius: BorderRadius.circular(12),
             image: DecorationImage(image: AssetImage(img)),
           ),
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [Colors.transparent, Colors.black54],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -278,14 +281,14 @@ class _HomeTabState extends State<HomeTab> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'UPTO',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
                           fontFamily: "OpenSans-regular"),
                     ),
-                    Text(
+                    const Text(
                       '20% OFF',
                       style: TextStyle(
                           color: Colors.orange,
@@ -293,7 +296,7 @@ class _HomeTabState extends State<HomeTab> {
                           // fontWeight: FontWeight.bold,
                           fontFamily: "OpenSans-bold"),
                     ),
-                    Text(
+                    const Text(
                       'On your first order',
                       style: TextStyle(
                           color: Colors.white,
@@ -310,7 +313,7 @@ class _HomeTabState extends State<HomeTab> {
                           decoration: BoxDecoration(
                               color: Colors.orange,
                               borderRadius: BorderRadius.circular(12)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'Order Now',
                               style: TextStyle(
@@ -335,7 +338,8 @@ class _HomeTabState extends State<HomeTab> {
       padding: const EdgeInsets.only(top: 12.0),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.black12, borderRadius: BorderRadius.circular(12)),
+            color: Colors.grey.withOpacity(0.2),
+            borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(children: [
@@ -350,7 +354,7 @@ class _HomeTabState extends State<HomeTab> {
                 width: 155.0,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -362,17 +366,17 @@ class _HomeTabState extends State<HomeTab> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.grey,
                       backgroundImage: AssetImage(
                         profile,
                       ),
                       radius: 28,
                     ),
-                    SizedBox(height: 4),
+                    const SizedBox(height: 4),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.star,
                           size: 16,
@@ -388,17 +392,17 @@ class _HomeTabState extends State<HomeTab> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'Warner Food',
                       style: TextStyle(fontFamily: "OpenSans-medium"),
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.delivery_dining,
                           size: 16,
@@ -417,7 +421,7 @@ class _HomeTabState extends State<HomeTab> {
                       ],
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.lock_clock,
                           size: 16,

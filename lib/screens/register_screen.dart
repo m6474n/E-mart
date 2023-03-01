@@ -20,7 +20,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final passController = TextEditingController();
   final nameController = TextEditingController();
 
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -38,44 +38,44 @@ class _RegisterScreenState extends State<RegisterScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Image(
+              const Image(
                 image: AssetImage('assets/images/register.png'),
                 height: 220,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Register',
                 style: TextStyle(
                     color: Colors.black87,
                     fontSize: 32,
                     fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 'Create new account',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 20,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               InputField(
                 obscure: false,
                 controller: nameController,
                 text: 'Name',
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
               ),
               InputField(
                 obscure: false,
                 controller: emailController,
                 text: 'Email',
-                icon: Icon(Icons.mail),
+                icon: const Icon(Icons.mail),
               ),
               TextField(
                 obscureText: true,
@@ -87,13 +87,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   hintText: 'Password',
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
-                      onPressed: () {}, icon: Icon(Icons.hide_source)),
-                  hintStyle: TextStyle(color: Colors.grey),
+                      onPressed: () {}, icon: const Icon(Icons.hide_source)),
+                  hintStyle: const TextStyle(color: Colors.grey),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               RoundedButton(
@@ -108,7 +108,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()))
+                                builder: (context) => const HomeScreen()))
                         .onError((error, stackTrace) {
                       Utils().toastMessage(error.toString());
                     });
@@ -119,16 +119,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Already have an account?',
+                  const Text('Already have an account?',
                       style: TextStyle(color: Colors.grey, fontSize: 16)),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                              builder: (context) => const LoginScreen()));
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign in.',
                       style: TextStyle(
                           color: Colors.orange,

@@ -36,31 +36,31 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Image(
+              const Image(
                 image: AssetImage('assets/images/login.png'),
                 height: 220,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Login ',
                 style: TextStyle(
                     color: Colors.black87,
                     fontSize: 32,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               InputField(
                 obscure: false,
                 controller: emailController,
                 text: 'Email',
-                icon: Icon(Icons.mail),
+                icon: const Icon(Icons.mail),
               ),
               TextField(
                 obscureText: obscr,
@@ -72,18 +72,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   hintText: 'Password',
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
                           obscr == true ? obscr = false : obscr;
                         });
                       },
-                      icon: Icon(Icons.visibility_off)),
-                  hintStyle: TextStyle(color: Colors.grey),
+                      icon: const Icon(Icons.visibility_off)),
+                  hintStyle: const TextStyle(color: Colors.grey),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               RoundedButton(
@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()))
+                                builder: (context) => const HomeScreen()))
                         .onError((error, stackTrace) {
                       Utils().toastMessage(error.toString());
                     });
@@ -109,16 +109,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Don't have an account?",
+                  const Text("Don't have an account?",
                       style: TextStyle(color: Colors.grey, fontSize: 16)),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RegisterScreen()));
+                              builder: (context) => const RegisterScreen()));
                     },
-                    child: Text(
+                    child: const Text(
                       'Register.',
                       style: TextStyle(
                           color: Colors.orange,

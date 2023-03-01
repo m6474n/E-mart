@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -26,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
               Image(height: 250, image: AssetImage('assets/images/logo.png')),
               SizedBox(
                 height: 10,
@@ -46,7 +48,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   void isLogin(BuildContext context) {
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => const FirstScreen())));
   }

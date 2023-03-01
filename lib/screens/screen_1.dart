@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, prefer_interpolation_to_compose_strings, avoid_print, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:p1/conponents/rounded_button.dart';
 import 'package:p1/screens/register_screen.dart';
@@ -10,7 +12,7 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  PageController _controller = PageController(initialPage: 0);
+  final PageController _controller = PageController(initialPage: 0);
   var pageIndex;
 
   pageViewChanged(page) {
@@ -55,11 +57,11 @@ class _FirstScreenState extends State<FirstScreen> {
                   text: "Next",
                   onTap: () {
                     _controller.nextPage(
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeIn);
                   }),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextButton(
@@ -69,7 +71,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       MaterialPageRoute(
                           builder: (context) => const RegisterScreen()));
                 },
-                child: Text(
+                child: const Text(
                   'Skip',
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ))
@@ -86,12 +88,12 @@ class _FirstScreenState extends State<FirstScreen> {
           image: AssetImage(image),
           // height: 150,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black87,
               fontSize: 24,
               fontFamily: 'OpenSans-bold',
@@ -99,7 +101,7 @@ class _FirstScreenState extends State<FirstScreen> {
               height: 1.2),
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Padding(
@@ -107,7 +109,7 @@ class _FirstScreenState extends State<FirstScreen> {
           child: Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey, fontSize: 16),
+            style: const TextStyle(color: Colors.grey, fontSize: 16),
           ),
         ),
       ],

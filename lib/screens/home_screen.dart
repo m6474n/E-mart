@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:p1/screens/login_screen.dart';
-import 'package:p1/utils/utility.dart';
+import 'package:p1/screens/Tabs/chat.dart';
+import 'package:p1/screens/Tabs/orders.dart';
 
 import 'Tabs/home.dart';
 
@@ -18,10 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
   PageController controller = PageController();
 
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = const [
+  static const List<Widget> _widgetOptions = [
     HomeTab(),
-    Text('Explore'),
-    Text('Cart'),
+    OrderTab(),
+    ChatTab(),
     Text('E-wallet'),
     Text('Profile'),
   ];
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16),
             child: GNav(
                 gap: 8,
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
                 backgroundColor: Colors.orange.shade400,
                 tabBackgroundColor: Colors.orange.shade300,
                 activeColor: Colors.white,
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     _selectedIndex = index;
                   });
                 },
-                tabs: [
+                tabs: const [
                   GButton(
                     icon: Icons.home,
                     text: "Home",
